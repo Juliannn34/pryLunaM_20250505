@@ -16,5 +16,23 @@ namespace pryLunaM_20250505
         {
             InitializeComponent();
         }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            cmbSuperheroe.Items.Clear();
+            cmbSuperheroe.Items.Add("Superman");
+            cmbSuperheroe.Items.Add("Batman");
+            cmbSuperheroe.Items.Add("Wonderwoman");
+
+
+        }
+
+        private void cmbSuperheroe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSuperheroe.SelectedIndex == -1)
+            {
+                picImagen.Show();
+            }
+        }
     }
 }
